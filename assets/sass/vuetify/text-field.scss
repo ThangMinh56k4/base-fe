@@ -1,0 +1,14 @@
+body .v-input {
+  --v-input-control-height: 48px;
+  > .v-input__control > .v-field {
+    background-color: #FFFFFF;
+
+    > .v-field__field  > .v-field__input {
+      background-color: #FFFFFF;
+      font-size: 16px;
+      color: #0D3025;
+      min-height: var(--v-input-control-height);
+      padding: 0 20px;
+    }
+  }
+}

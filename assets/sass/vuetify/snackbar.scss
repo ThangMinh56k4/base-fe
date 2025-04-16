@@ -1,0 +1,18 @@
+@use '../utils/vars.scss' as vas;
+
+body .v-snackbar__wrapper {
+  top: 4rem !important;
+  border-radius: 0.75rem;
+  box-shadow: vas.$box-shadow-lg;
+
+  .v-snackbar__content {
+    text-align: center;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: normal;
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
