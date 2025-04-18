@@ -8,6 +8,10 @@ export default withNuxt(
       'vue/html-indent': ['error', 2],
       '@typescript-eslint/no-explicit-any': 'off',
       '@stylistic/semi': 'off',
+      '@stylistic/arrow-parens': 'off',
+      '@stylistic/brace-style': 'off',
+      '@stylistic/member-delimiter-style': 'off',
+      'vue/html-self-closing': 'off'
     },
   },
 );

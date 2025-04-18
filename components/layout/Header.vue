@@ -19,12 +19,14 @@ const logout = () => {
 <template>
   <v-app-bar class="layout-header">
     <template #title>
-      <nuxt-link
-        to="/"
-        class="title"
-      >
-        Training App
-      </nuxt-link>
+      <slot name="appTile">
+        <nuxt-link
+          to="/"
+          class="title"
+        >
+          Training App
+        </nuxt-link>
+      </slot>
     </template>
     <v-spacer />
     <v-menu v-if="user">

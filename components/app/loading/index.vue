@@ -49,7 +49,7 @@ onMounted(() => {
     ref="loadingMask"
     class="app-loading"
   >
-    <app-loading-spinner />
+    <app-loading-spinner size="64" />
   </div>
 </template>
 

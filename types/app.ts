@@ -59,3 +59,7 @@ export type LoadMoreProps = {
   side: LoadMoreSide;
   done: (status: LoadMoreStatus) => void;
 };
+
+export type Nullish = null | undefined
+export type Nullable<T> = T | Nullish
+export type NotEmptyArray<T> = T[] & { 0: T }

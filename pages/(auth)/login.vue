@@ -2,6 +2,7 @@
 import { z } from 'zod'
 
 import { LoginStrategy } from '@/types'
+import { ROUTES } from '@/config'
 
 definePageMeta({
   layout: 'auth',
@@ -43,7 +44,7 @@ const onLogin = handleSubmit(async (values) => {
   const loggedIn = await $auth.loginWith(LoginStrategy.LOCAL, values)
 
   if (loggedIn) {
-    router.push('/')
+    router.push(ROUTES.home.path)
   }
 })
 
@@ -55,23 +56,19 @@ const loginWithFacebook = async () => {
   const loggedIn = await $auth.loginWith(LoginStrategy.FACEBOOK)
 
   if (loggedIn) {
-    router.push('/')
+    router.push(ROUTES.home.path)
   }
 }
 
 const loginWithGoogle = async () => {
-  const loggedIn = await $auth.loginWith(LoginStrategy.GOOGLE)
-
-  if (loggedIn) {
-    router.push('/')
-  }
+  $auth.loginWith(LoginStrategy.GOOGLE)
 }
 
 const handleGoogleLoginCallback = async (token: string) => {
   try {
     loginWithGoogleLoading.value = true
     await $auth.setAuth(token)
-    await router.push('/')
+    await router.push(ROUTES.map.path)
   }
   finally {
     loginWithGoogleLoading.value = false

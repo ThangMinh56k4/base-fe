@@ -4,7 +4,7 @@ import type { AppError } from '@/types';
 import { ERROR_STATUS } from '@/config';
 
 const { error } = defineProps<{
-  error: AppError;
+  error: AppError
 }>();
 
 const icon = computed(() => {

@@ -2,12 +2,16 @@
 defineOptions({
   name: 'AppLoadingSpinner'
 });
+
+const { size } = defineProps<{
+  size?: string
+}>();
 </script>
 
 <template>
   <v-icon
     icon="fa:fas fa-spinner"
-    size="64"
+    :size="size"
     class="app-loading-spinner"
   />
 </template>
